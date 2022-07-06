@@ -19,6 +19,6 @@ def user_login(request):
                     return HttpResponse('Konto jest zablokowane')
             else:
                 return HttpResponse('Nieprawidłowe dane logowania')
-        else:
-            form = LoginForm()
-        return render(request,'account/login.html',{'form':form})
+    else:
+        form = LoginForm()
+    return render(request,'account/login.html',{'form':form})
